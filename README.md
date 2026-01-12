@@ -16,4 +16,4 @@ A Chrome Extension that injects an AI drafting button directly into the Gmail in
    - Open `chrome://extensions/`
    - Enable **Developer Mode**.
    - Click **Load Unpacked** and select the `dist` folder.
->>>>>>> b47f873f67cb324bfeca838ef5a2cc5ffd2ec730
+
