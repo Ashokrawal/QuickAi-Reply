@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "QuickReply AI",
+  "version": "1.0.0",
+  "description": "AI-powered email assistant for Gmail.",
+  "icons": {
+    "16": "email-writer.webp",
+    "48": "email-writer.webp",
+    "128": "email-writer.webp"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "email-writer.webp",
+      "48": "email-writer.webp",
+      "128": "email-writer.webp"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["email-writer.webp"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}
